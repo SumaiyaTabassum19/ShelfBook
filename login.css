@@ -1,0 +1,210 @@
+/* --- V10 Register/Login Card Design (Clean Focus) --- */
+
+/* Base Body Styling */
+.auth_body_v10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F4F4F9; /* Light background */
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+/* Auth Container (Small Box Size) */
+.auth_container_v10 {
+    width: 100%;
+    max-width: 400px; /* Max width for small size */
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+}
+
+.register_form_v10 h2 {
+    font-size: 2rem;
+    color: #800000; /* Deep Red/Maroon */
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Form Groups (Input/Label Wrappers) */
+.form_group {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.form_group label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form_input_v10,
+.form_select_v10 {
+    width: 92%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fcfcfc;
+}
+
+.form_input_v10:focus,
+.form_select_v10:focus {
+    outline: none;
+    border-color: #F39C12; /* Muted Gold/Yellow focus */
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.4);
+}
+
+/* Select Group Specific Styling */
+.select_group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.select_group label {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+.form_select_v10 {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.submit_btn_v10 {
+    width: 100%;
+    padding: 12px;
+    background-color: #800000; /* Deep Red/Maroon primary action */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.submit_btn_v10:hover {
+    background-color:#2C3E50;
+}
+
+/* Footer Links */
+.form_footer_links {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.footer_link_v10 {
+    color: #800000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.footer_link_v10:hover {
+    color: #F39C12;
+    text-decoration: underline;
+}
+
+/* Message alert (assuming .message_alert class is used for PHP messages) */
+.message_alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background-color: #F39C12;
+    color: #2C3E50;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.message_alert i {
+    cursor: pointer;
+    margin-left: 15px;
+    color: #2C3E50;
+}
+
+
+/* --- Login Form Specific Adjustments --- */
+.login_form_v10 h2 {
+    font-size: 2rem;
+    color: #800000;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Utility Links (Forgot Password) */
+.form_utility_links {
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.form_utility_links .footer_link_v10 {
+    color: #800000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form_utility_links .footer_link_v10:hover {
+    color: #F39C12;
+    text-decoration: underline;
+}
+
+/* Footer Links (Don't have an account?) */
+.form_footer_links {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.form_footer_links .footer_link_v10 {
+    color: #800000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form_footer_links .footer_link_v10:hover {
+    color: #F39C12;
+    text-decoration: underline;
+}
+
+/* Ensure the submit button has sufficient top margin */
+.login_form_v10 .submit_btn_v10 {
+    margin-top: 5px; /* Less margin than register form since links are above */
+}
+
+/* --- The rest of the V10 CSS from register.php should be present here --- */
+
+/* Media Query for smaller screens */
+@media (max-width: 480px) {
+    .auth_container_v10 {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    .register_form_v10 h2 {
+        font-size: 1.8rem;
+    }
+    .select_group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .select_group label {
+        width: 100%;
+    }
+}
